@@ -5,4 +5,8 @@ public class Test1 {
         System.out.println("Hello world");
     }
 
+    public static int mult(int a, int b) {
+        return a * b;
+    }
+
 }
