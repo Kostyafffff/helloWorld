@@ -19,6 +19,7 @@ public class Test1 {
          /*
         2) Определить какой области принадлежит точка с координатами (х,у,z)
           */
+         //зеркальное число 321 123
 
 
     }
@@ -89,6 +90,32 @@ public class Test1 {
             big = big.multiply(BigInteger.valueOf(i));
         }
         return big;
+    }
+
+    //2) Вывести число, которое является зеркальным отображением последовательности цифр заданного числа,
+    // например, задано число 123, вывести 321
+    public static int mirrorPrint(int number)
+    {
+        while (number != 0)
+        {
+            System.out.print(number % 10);
+            number /= 10;
+        }
+        return number;
+    }
+
+    //3.1) Поменять местами первую и вторую половину массива, например, для массива 1 2 3 4, результат 3 4 1 2
+    public static int[] replaceArray(int[] array)
+    {
+        int half = array.length / 2;
+        int div = half + array.length % 2;
+        for(int i = 0; i < div; i++)
+        {
+            int temp = array[i];
+            array[i] = array[div + i];
+            array[div + i] = temp;
+        }
+        return array;
     }
 
 
