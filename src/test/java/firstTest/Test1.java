@@ -117,6 +117,24 @@ public class Test1 {
         }
         return array;
     }
+    //сортировка пузырьком
+    public static int[] bubbleSort(int[] array)
+    {
+        int l = array.length;
+        for(int i = 0; i < l-1; i++)
+        {
+            for(int j = 0; j < l-1-i; j++)
+            {
+                if(array[j] > array[j + 1])
+                {
+                    int temporary = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temporary;
+                }
+            }
+        }
+        return array;
+    }
 
 
 }
