@@ -50,6 +50,39 @@ public class Test1 {
             return a + b - c;
         }
     }
+
+    // 1 плоскость (x > 0, y > 0, z > 0)
+    // 2 плоскость (x > 0, y > 0, z < 0
+    // 3 плоскость (x < 0, y > 0, z < 0)
+    // 4 плоскость (x < 0, y > 0, z > 0)
+    // 5 плоскость (x > 0, y < 0, z < 0)
+    // 6 плоскость (x > 0, y < 0, z < 0)
+    // 7 плоскость (x < 0, y < 0, z < 0)
+    // 8 плоскость (x < 0, y < 0, z > 0)
+    public static void greatFunction(int x, int y, int z) {
+        if (x > 0 && y > 0 && z > 0) {
+            System.out.println("Точка приндлежит первой плоскости");
+        } else if (x > 0 && y > 0 && z < 0) {
+            System.out.println("Точка приндлежит второй плоскости");
+        } else if (x < 0 && y > 0 && z < 0) {
+            System.out.println("Точка принадлежит третей плоскости");
+        } else if (x < 0 && y > 0 && z > 0) {
+            System.out.println("Точка приндлежит четвертой плоскости");
+        } else if (x > 0 && y < 0 && z < 0) {
+            System.out.println("Точка приндлежит пятой плоскости");
+        } else if (x > 0 && y < 0 && z < 0) {
+            System.out.println("Точка принадлежит шестой плоскости");
+        } else if (x < 0 && y < 0 && z < 0) {
+            System.out.println("Точка принадлежит седьмой плоскости");
+        } else if (x < 0 && y < 0 && z > 0) {
+            System.out.println("Точка принадлежит восьмой плоскости");
+        } else {
+            System.out.println("Точка не принадлежит никакой плоскости");
+        }
+    }
+
+
+        //факториал
         public static int factForFirst( int number)
         {
             int mult = 1;
@@ -60,6 +93,7 @@ public class Test1 {
             return mult;
         }
 
+    //факториал
         public static int factForSecond( int number)
         {
             int mult = 1;
@@ -70,6 +104,7 @@ public class Test1 {
             return mult;
         }
 
+    //факториал
         public static int whileFact(int number)
         {
             int i = 1;
@@ -82,6 +117,7 @@ public class Test1 {
             return mult;
         }
 
+    //факториал
         public static int doWhileFact(int number)
         {
             int i = 1;
