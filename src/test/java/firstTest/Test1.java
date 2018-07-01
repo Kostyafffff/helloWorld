@@ -59,7 +59,7 @@ public class Test1 {
     // 6 плоскость (x > 0, y < 0, z < 0)
     // 7 плоскость (x < 0, y < 0, z < 0)
     // 8 плоскость (x < 0, y < 0, z > 0)
-    public static void greatFunction(int x, int y, int z) {
+    public static void greatFunctionn(int x, int y, int z) {
         if (x > 0 && y > 0 && z > 0) {
             System.out.println("Точка приндлежит первой плоскости");
         } else if (x > 0 && y > 0 && z < 0) {
