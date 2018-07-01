@@ -1,25 +1,37 @@
 package firstTest;
 
 import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.Set;
+import java.util.TreeSet;
 
 import static java.lang.Math.decrementExact;
 import static java.lang.Math.pow;
 
 public class Test1 {
     public static void main(String[] args) {
-         /*
-    1) Если а – четное посчитать а*б/с,
-    если "а+с" или "b+c" четное - посчитать "a" возведенную в степень "c"
-    иначе посчитать  а+б-с
-     */
+        //Строка в целое число
+        try {
+            Integer i1 = new Integer("20349");
+            System.out.println(i1);
+        }catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
 
-         System.out.println(doWhileFact(5));
-         System.out.println(task1(0, -1, 1));
+        //строка в вещественное число
+        try {
+            Double d1 = new Double("4.4e10");
+            System.out.println(d1);
+        } catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
 
-         /*
-        2) Определить какой области принадлежит точка с координатами (х,у,z)
-          */
-         //зеркальное число 321 123
+        //преобразование вещественного числа в строку
+        //String str = Double.toString(i);
+
+        //преобразование целого числа в строку
+        int number = 5;
+        System.out.println(Integer.toString(number));
 
 
     }
@@ -136,6 +148,53 @@ public class Test1 {
         return array;
     }
 
+    //Подсчитать количество слов во введенной пользователем строке
+    public static void wordCounter(String s)
+    {
+        String temp = new String();
+        temp = s.trim();
+        String[] awords = temp.split("\\s+");
 
+        if(temp.isEmpty())
+        {
+            System.out.println("Строка пустая");
+        }
+        else{
+            System.out.println(awords.length);
+        }
+    }
+    public static String convertToString(int number)
+    {
+        int a;
+        int b;
+        StringBuilder build = new StringBuilder();
+
+        while (number > 0)
+        {
+            a = number % 10;
+            number /= 10;
+            b = (char)('0' + a);
+            build.append(b);
+        }
+        return build.reverse().toString();
+    }
+
+    public static String doubleToString(double number)
+    {
+        String str = Double.toString(number);
+        return str;
+    }
+
+    //)Дана строка, состоящая из слов, разделенных пробелами и знаками препинания. Определить длину самого короткого слова
+    public static String shortestWord(String word)
+    {
+        String [] splitArray = word.split("[\\p{Punct}\\s]+");
+        //System.out.println(Arrays.toString(splitArray));
+        Set set = new TreeSet<String>((o1, o2) -> o1.length() - o2.length());
+        set.addAll(Arrays.asList(splitArray));
+
+        String shortest = (String) set.toArray()[0];
+        return shortest;
+    }
 }
 
