@@ -10,6 +10,9 @@ import static java.lang.Math.pow;
 
 public class Test1 {
     public static void main(String[] args) {
+        //удаление последнего слова
+        String word = "sadas dsadasdsa sad";
+        word.substring(0, word.lastIndexOf(" "));
         //Строка в целое число
         try {
             Integer i1 = new Integer("20349");
